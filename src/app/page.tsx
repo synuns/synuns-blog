@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function Home() {
-  return <div>Hello synuns!</div>;
+  return <div>hello synuns!</div>;
 }

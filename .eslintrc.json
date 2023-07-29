@@ -1,16 +1,25 @@
 {
-  "parser": "@typescript-eslint/parser",
+  "env": { "browser": true, "es6": true, "node": true },
   "parserOptions": {
+    "sourceType": "module",
     "project": "./tsconfig.json"
   },
+  "parser": "@typescript-eslint/parser",
   "extends": [
     "next/core-web-vitals",
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:prettier/recommended",
-    "airbnb",
     "plugin:@typescript-eslint/recommended",
-    "prettier/@typescript-eslint"
+    "airbnb",
+    "airbnb-typescript"
   ],
-  "plugins": ["prettier", "react", "react-hooks"]
+  "plugins": ["prettier", "react", "import", "simple-import-sort"],
+  "rules": {
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error"
+  }
 }
